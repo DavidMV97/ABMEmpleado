@@ -13,11 +13,13 @@ export class EmpleadoService {
     { nombreCompleto: 'Pedro arango ' , telefono: '8754444' , correo: 'juan@gmail.com' , fechaIngreso: new Date() , estadoCivil: 'soltero' , sexo: 'Masculino' } 
   ] ; 
 
-
-
   constructor() { }
 
   getEmpleados(){
     return this.listEmpleado.slice(); 
+  }
+
+  eliminarEmpleado(index: number){ 
+    this.listEmpleado.splice(index, 1) ; 
   }
 }
